@@ -1,0 +1,40 @@
+# Ignore everything by default
+*
+
+# Allow backend and all contents
+!backend/
+!backend/**
+
+# Allow app and all contents
+!app/
+!app/**
+
+# Allow test folders and files
+!tests/
+!tests/**
+
+# Allow essential project files
+!.gitignore
+!requirements.txt
+!README.md
+
+# Ignore Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore IDE and system files
+.idea/
+.vscode/
+*.DS_Store
+
+# Ignore logs and cache
+*.log
+*.sqlite3
+*.db
+.cache/

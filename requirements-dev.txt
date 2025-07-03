@@ -1,0 +1,24 @@
+# HugDimonXat Development and Testing Dependencies
+
+# Testing
+pytest==8.3.5  # Using the newer version from backend/requirements.txt
+pytest-cov==4.1.0
+pytest-mock==3.14.0  # Using the newer version from backend/requirements.txt
+pytest-flask==1.2.0
+pytest-env==0.8.2
+pytest-benchmark==4.0.0
+pytest-xdist==3.3.1
+coverage==7.3.0
+
+# Mocking
+responses==0.23.3
+freezegun==1.2.2
+
+# Code Quality
+black==24.3.0  # Added for code formatting
+isort==5.13.2  # Added for import sorting
+mypy==1.9.0    # Added for type checking
+flake8==7.0.0  # Added for linting
+
+# Documentation
+sphinx==7.3.7  # Added for documentation generation

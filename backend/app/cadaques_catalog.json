@@ -1,0 +1,571 @@
+{
+  "sections": [
+    {
+      "section": "GASTRONOMÍA",
+      "places": [
+        {
+          "name": "Compartir",
+          "direction": "Riera de Sant Vicenç s/n, 17488 Cadaqués, Girona (13 min andando desde wecamp Cadaqués/5 min en coche)",
+          "description": "Restaurante especializado en platos para compartir. Ofrece platos de estilo marcadamente moderno y propuestas más tradicionales, como ahora los arroces.",
+          "features": {
+            "has_terrace": true,
+            "sea_view": true,
+            "booking": true
+          },
+          "booking": {
+            "has_booking": true,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Casa Anita",
+          "direction": "Carrer Miquel Rosset, 16, 17488 Cadaqués, Girona (7 min andando desde wecamp Cadaqués/6 min en coche)",
+          "description": "Restaurante de cocina local, con platos preparados usando productos locales, pescado de pescadores locales y verduras de su propio huerto.",
+          "features": {
+            "has_terrace": false,
+            "sea_view": false,
+            "booking": true
+          },
+          "booking": {
+            "has_booking": true,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Restaurante Casa Nun",
+          "direction": "Pl. des Portitxó, 6, 17488 Cadaqués, Girona (9 min andando desde wecamp Cadaqués/6 min en coche)",
+          "description": "Lugar agradable y tranquilo con una terraza acogedora, cerca del paseo pero un poco apartado.",
+          "features": {
+            "booking": true
+          },
+          "booking": {
+            "has_booking": true,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Restaurante Raviyu",
+          "direction": "Avenida Caridad Serinyana, 5, 17488 Cadaqués, Girona (11 min andando desde wecamp Cadaqués/5 min en coche)",
+          "description": "Restaurante creado por un grupo de 3 amigos, que ofrecen deliciosas pizzas elaboradas a un horno de leña napolitano y carne fresca local, pollo orgánico y hamburguesas a domicilio.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Restaurante Can Rafa",
+          "direction": "Plaza del Paseo, 7, Cadaqués, Girona (10 min andando desde wecamp Cadaqués/6 min en coche)",
+          "description": "Restaurante familiar situado a primera línea de mar, que ofrece cocina de mercado y productos frescos provenientes directamente de los pescadores de Cadaqués, además de arroces y postres elaborados por Carmen.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Xiringuito de la sal",
+          "direction": "Av. Víctor Rahola 25 - Platja de Ses Oliveres - 872 20 40 41 (15 min andando desde wecamp Cadaqués/6 min en coche)",
+          "description": "Chiringuito con cocina mediterránea, dispone de unas vistas espectaculares a las playas de la localidad.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Lua Wine & Soul Food",
+          "direction": "Carrer Santa Maria, 1, 17488 Cadaqués, Girona (13 min andando desde wecamp Cadaqués/6 min en coche)",
+          "description": "Local moderno que destaca por la originalidad en la elaboración de sus platos, totalmente diferentes a los que ofrece la gastronomía en Cadaqués.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "El Viatge",
+          "direction": "Plaça Doctor Pont, 5 (14 min andando desde wecamp Cadaqués/8 min en coche)",
+          "description": "Restaurante especializado en cocina mediterránea combinada con gastronomía internacional, en un espacio muy cuidado.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Norai",
+          "direction": "C/ del Doctor Bartomeus, 37 (21 min andando desde wecamp Cadaqués)",
+          "description": "Cocina local elaborada con productos de proximidad, pescado de pescadores locales y verduras del huerto propio.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "PLAYAS Y CALAS",
+      "places": [
+        {
+          "name": "Cala Guillola",
+          "direction": "Parque Natural del Cap de Creus (13 min en coche desde wecamp Cadaqués/4.4 km)",
+          "description": "Soleada, no muy grande, con un fondo marino cristalino y perfecta para pasar el día tranquilo.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Sa Sabolla",
+          "direction": "Sur-este de la bahía de Cadaqués (19 min en coche desde wecamp Cadaqués/4.3 km)",
+          "description": "Rodeada de rocas de pizarra, ideal para pasar el día y disfrutar de esta encantadora y solitaria cala.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Cala Culip",
+          "direction": "Cap de Creus (16 min en coche desde wecamp Cadaqués/7.1 km)",
+          "description": "Cala emblemática por su historia, perfecta para inmersión y vistas marinas.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Cala Jugadora",
+          "direction": "Cap de Creus (13 min en coche desde wecamp Cadaqués/6.5 km)",
+          "description": "Refugiada de los fuertes vientos, muy soleada, consta de dos playitas, una de piedras y otra arenosa, con restos de un antiguo refugio de pescadores.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Playa del Ros",
+          "direction": "Centro de la ciudad (16 min andando/5 min en coche desde wecamp Cadaqués)",
+          "description": "Ideal para familias, con aparcamiento cercano y chiringuito para comida y bebida.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Sa Conca",
+          "direction": "Sur de Cadaqués (10 min en coche/27 min andando desde wecamp Cadaqués)",
+          "description": "Playa natural de arena gruesa y rocas; destaca la profundidad que alcanzan sus aguas rápidamente.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Playa des Llaner Gran i Petit",
+          "direction": "Centro de la ciudad (22 min en coche desde wecamp Cadaqués/13.9 km)",
+          "description": "Ofrece vistas excelentes de la ciudad. Arena gruesa y aguas profundas ideales para baño.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Es Sortell",
+          "direction": "Sur de la bahía de Cadaqués (29 min andando/11 min en coche desde wecamp Cadaqués)",
+          "description": "Una de las mejores vistas del centro del pueblo y de las montañas que lo rodean.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "ARTE Y CULTURA",
+      "places": [
+        {
+          "name": "Casa museo Salvador Dalí",
+          "direction": "Portlligat, Cadaqués, Girona (6 min andando desde wecamp Cadaqués/3 min en coche)",
+          "description": "Única residencia estable de Salvador Dalí, donde vivió y trabajó hasta 1982.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Galería Cadaqués",
+          "direction": "Horta d’en Sanés 7, Cadaqués, Girona (6 min andando/2 min en coche)",
+          "description": "Galería de arte contemporáneo fundada en 1973, referente en vanguardia y compromiso artístico.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Taller Galería Fort",
+          "direction": "Hort d'en Sanés 9, Cadaqués, Girona (6 min andando/2 min en coche)",
+          "description": "Exposición internacional de grabados y exhibiciones individuales de artistas.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "MARGES-U",
+          "direction": "Unió 12, Cadaqués, Girona (13 min andando/5 min en coche)",
+          "description": "Galería activa todo el año con propuestas de pintura, escultura, arquitectura, conferencias y talleres.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Museo de Cadaqués",
+          "direction": "Narcís Monturiol 15, Cadaqués, Girona (14 min andando/5 min en coche)",
+          "description": "Dedicado a Salvador Dalí, con exposiciones temporales sobre el pintor y su obra.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Ciutadella de Roses",
+          "direction": "Av. de Rhode, s/n, 17480 Roses, Girona (35 min en coche)",
+          "description": "Fortaleza militar renacentista convertida en centro cultural y museo sobre la historia regional.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "FESTIVIDADES",
+      "places": [
+        {
+          "name": "Sol Ixent",
+          "direction": "Faro de Cap de Creus (1 de enero, 7 am)",
+          "description": "Amanecer del año con sardanas y chocolate caliente, en el punto más oriental de la península.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Carnaval de Cadaqués",
+          "direction": "Cadaqués (febrero)",
+          "description": "Fiesta popular con disfraces, actividades musicales y comida.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Festividad de San Sebastián",
+          "direction": "Ermita de San Sebastián (enero)",
+          "description": "Subida al santuario y misa en honor al santo. Caminata de 2h desde el pueblo.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Semana Cultural",
+          "direction": "Cadaqués (abril)",
+          "description": "Actividades culturales y premios literarios alrededor del 23 de abril (San Jordi).",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Feria de los Indianos",
+          "direction": "Cadaqués (junio)",
+          "description": "Celebración caribeña con oficios, talleres, música y ambiente festivo.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Procesión en Barca de la Virgen del Carmen",
+          "direction": "Cadaqués (16 de julio)",
+          "description": "Procesión marítima con pescadores, flores y trajes típicos.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Festival internacional de música de Cadaqués",
+          "direction": "Cadaqués (agosto)",
+          "description": "Conciertos en la iglesia, centros culturales y espacios naturales.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Fiesta mayor de Cadaqués",
+          "direction": "Cadaqués (11 de septiembre)",
+          "description": "Concurso de cántaros, regatas, gigantes, y eventos en la semana del día nacional de Cataluña.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "InCadaqués",
+          "direction": "Cadaqués (octubre)",
+          "description": "Festival internacional de fotografía con exposiciones por todo el pueblo.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "RUTAS",
+      "places": [
+        {
+          "name": "Cadaqués a Roses",
+          "direction": "20.13 km (6h 30 min)",
+          "description": "Ruta costera que recorre calas preciosas y ofrece paisajes únicos. Ideal para un día completo.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Excursión al Paraje de Tudela",
+          "direction": "Parque Natural del Cap de Creus (5.5 km / 1h30-2h)",
+          "description": "Ruta por un paisaje protegido, con geología y naturaleza únicas. Inspiración de Dalí.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Faro de Cala Nans",
+          "direction": "Desde Cadaqués (5 km / 1h 20 min)",
+          "description": "Paseo con vistas a la bahía y acceso a la playa de Sa Sabolla.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Cadaqués-Port Lligat",
+          "direction": "7.27 km / 2h 57 min",
+          "description": "Ruta corta que lleva a la Casa Museo Dalí, bordeando la costa.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "EXPERIENCIAS",
+      "places": [
+        {
+          "name": "Cadaqués Divers",
+          "direction": "Plaça del Dr. Pont, 6, 17488 Cadaqués (12 min andando)",
+          "description": "Centro de buceo familiar con tienda sostenible de artículos marinos.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Charter Sant Isidre",
+          "direction": "Cadaqués (11 min andando/9 min en coche)",
+          "description": "Barco tradicional para excursiones, eventos, cenas y actividades privadas.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Cadaqués Boats",
+          "direction": "Cadaqués (8 min andando/3 min en coche)",
+          "description": "Alquiler de embarcaciones para explorar calas del Cap de Creus.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Sotamar",
+          "direction": "Cadaqués (12 min andando/4 min en coche)",
+          "description": "Buceo respetuoso por la costa, con 20 años de experiencia local.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Gala acústica",
+          "direction": "Salida desde Port Lligat (8 min andando/3 min en coche)",
+          "description": "Conciertos en barco por el Parque Natural de Cap de Creus, con cava y música.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    },
+    {
+      "section": "PRODUCTO ARTESANAL",
+      "places": [
+        {
+          "name": "Ginebra Cap de Creus",
+          "direction": "Llançà, Cap de Creus",
+          "description": "Ginebra artesanal destilada con alambique de cobre tradicional.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Anchoas Port de la Selva",
+          "direction": "Cadaqués",
+          "description": "Anchoas artesanales de la cofradía de pescadores del Port de la Selva.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        },
+        {
+          "name": "Aceite de Cadaqués MF",
+          "direction": "Cadaqués",
+          "description": "Aceite 100% Verdal o Llei, obtenido mediante procesos mecánicos.",
+          "features": {
+            "booking": false
+          },
+          "booking": {
+            "has_booking": false,
+            "email": "1@gaikagroup.com"
+          }
+        }
+      ]
+    }
+  ]
+}
