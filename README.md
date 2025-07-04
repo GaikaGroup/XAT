@@ -27,8 +27,6 @@ HugDimonXat follows a microservice architecture with three main components:
 2. **Backend Service**: Flask API with AI processing capabilities
 3. **Speech Service**: Voice transcription using Whisper
 
-
-
 ```
 HugDimonXat/
 ├── backend/               # Flask backend with AI capabilities
@@ -44,12 +42,85 @@ HugDimonXat/
 │   └── src/               # React components and logic
 ├── speech_service/        # Voice transcription service
 │   └── transcribe_api.py  # Whisper-based transcription API
+├── audio/                 # Storage for audio recordings from voice messages
+├── Dialogs/               # Dialog templates and scripts for conversation flows
+├── Prompts/               # AI prompt templates for different scenarios
+└── scripts/               # Deployment and utility scripts
+```
+
+## 📦 Media Storage
+
+### Current Implementation
+
+HugDimonXat currently implements a simple but functional approach to media storage:
+
+1. **Audio Files**: Voice message recordings are stored in the filesystem:
+   - Location: `/audio` directory at the project root
+   - Implementation: The transcription service in `speech_service/transcribe_api.py` saves audio files with unique filenames based on timestamps and UUIDs
+   - Format: Supports various audio formats (WEBM, MP4, OGG, WAV)
+
+2. **Dialog Data**: Conversation data is stored in-memory:
+   - Implementation: Python dictionary called `SESSION_STATE` in `Dialogs/restaurant_script_engine.py`
+   - Persistence: In-memory only, not persisted between application restarts
+
+### Best Practices for Production
+
+For a production environment handling thousands of messages daily, the following best practices are recommended:
+
+#### 1. Separate Storage from Application
+
+**Recommendation**: Move media storage to a dedicated storage service.
+
+- **Object Storage**: Use a service like AWS S3, Google Cloud Storage, or Azure Blob Storage
+- **Benefits**: Scalability, durability, and separation of concerns
+- **Implementation**: Replace direct filesystem writes with API calls to cloud storage
+
+#### 2. Database Integration
+
+**Recommendation**: Store metadata in a database, but not the actual media files.
+
+- **Metadata in Database**: Store file paths, timestamps, user IDs, and transcription results
+- **Media in Object Storage**: Store the actual audio files in object storage
+- **Hybrid Approach**: For very small audio clips, consider storing them directly in a database that supports binary data efficiently (like PostgreSQL with BYTEA type)
+
+#### 3. Retention Policy
+
+**Recommendation**: Establish a clear retention policy for media files.
+
+- **Time-Based Deletion**: Automatically delete files older than X days
+- **Usage-Based Retention**: Keep files that are frequently accessed
+- **Legal Compliance**: Ensure retention policies comply with relevant regulations
+
+#### 4. Performance Optimization
+
+**Recommendation**: Implement strategies to reduce storage needs and improve retrieval speed.
+
+- **Compression**: Use audio compression appropriate for voice (e.g., Opus codec)
+- **Caching**: Implement a caching layer for frequently accessed files
+- **CDN Integration**: For public media, use a Content Delivery Network
+
+#### 5. Backup Strategy
+
+**Recommendation**: Ensure media files are properly backed up.
+
+- **Regular Backups**: Schedule regular backups of media files
+- **Cross-Region Replication**: For cloud storage, enable cross-region replication
+- **Backup Verification**: Regularly test restoration from backups
+
+### Implementation Roadmap
+
+1. **Short-term**: Add a cleanup script to remove old audio files from the filesystem
+2. **Medium-term**: Migrate to a proper database for metadata and object storage for media files
+3. **Long-term**: Implement a complete media management system with retention policies, compression, and analytics
+
+=======
 ├── audio/                 # Storage for audio recordings
 ├── Dialogs/               # Dialog templates and scripts
 ├── Prompts/               # AI prompt templates
 └── scripts/               # Deployment and utility scripts
 ```
 
+>>>>>>> d84c8fda29947329edcc6de2a1dfa4436aa50e2f
 ## 🧠 Tech Stack
 
 ### Backend Technologies
@@ -189,6 +260,29 @@ For production deployment, consider the following options:
    - Use API Gateway for routing
 
 Note: Docker configuration files have been removed from the project. If you wish to use Docker for deployment, you will need to create your own Dockerfile and docker-compose.yml files.
+
+### GitHub Synchronization
+
+The project includes scripts to automatically synchronize changes with a GitHub repository:
+
+1. **Set up GitHub synchronization**
+   ```bash
+   # Make scripts executable
+   chmod +x scripts/*.sh
+
+   # Set up GitHub remote and automatic sync
+   ./scripts/setup_github_sync.sh <github_repo_url>
+
+   # Push all existing branches to GitHub
+   ./scripts/push_all_to_github.sh
+   ```
+
+2. **How it works**
+   - Adds GitHub as a remote repository
+   - Creates a post-commit hook that automatically pushes all commits to both GitLab and GitHub
+   - Ensures all changes are always available on both platforms
+
+For detailed instructions and troubleshooting, see the [GitHub Synchronization Scripts README](scripts/README.md).
 
 ## ⚙️ Configuration
 
