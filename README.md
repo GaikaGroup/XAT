@@ -3,13 +3,42 @@
 <div align="center">
   <img src="frontend/public/logo.png" alt="HugDimonXat Logo" width="200"/>
   <h3>Intelligent Conversational Platform with Voice Capabilities</h3>
+  <p>An advanced AI-powered chat application with voice transcription, natural language processing, and multilingual support.</p>
+
+  [![GitHub Stars](https://img.shields.io/github/stars/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/stargazers)
+  [![GitHub Issues](https://img.shields.io/github/issues/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/pulls)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 </div>
 
-## 📋 Overview
+## 📋 Table of Contents
 
-HugDimonXat is an advanced chat application that integrates voice transcription, natural language processing, and AI-powered conversational capabilities. The project features a microservice architecture that separates frontend, backend, and voice processing services for scalability and maintainability.
+- [✨ Features](#-features)
+- [🖼️ Demo](#-demo)
+- [🚀 Quick Start](#-quick-start)
+- [📖 Overview](#-overview)
+- [🏗️ Architecture](#-architecture)
+- [🧠 Tech Stack](#-tech-stack)
+- [🤖 AI Stack](#-ai-stack)
+- [🛠️ Installation](#-installation)
+  - [Prerequisites](#prerequisites)
+  - [Setup Steps](#setup-steps)
+  - [Configuration](#configuration)
+- [▶️ Running the Application](#-running-the-application)
+- [📘 API Documentation](#-api-documentation)
+- [🧪 Testing](#-testing)
+- [🔍 Monitoring and Metrics](#-monitoring-and-metrics)
+- [📦 Media Storage](#-media-storage)
+- [🚀 Deployment](#-deployment)
+- [❓ Troubleshooting](#-troubleshooting)
+- [🤝 Contributing](#-contributing)
+- [📚 Additional Documentation](#-additional-documentation)
+- [👥 Authors](#-authors)
+- [📄 License](#-license)
+- [📊 Project Status](#-project-status)
+- [📞 Contact](#-contact)
 
-### Key Features
+## ✨ Features
 
 - **Voice Transcription**: Record and transcribe voice messages in multiple languages
 - **AI-Powered Chat**: Intelligent responses using OpenAI's language models
@@ -18,6 +47,34 @@ HugDimonXat is an advanced chat application that integrates voice transcription,
 - **Sentiment Analysis**: Analyze the sentiment of user messages
 - **Responsive UI**: Modern interface that works across devices
 - **Metrics Dashboard**: Real-time monitoring of system performance and health at `/dashboard`
+
+## 🖼️ Demo
+
+*[Add screenshots or GIFs of your application here]*
+
+## 🚀 Quick Start
+
+For those who want to get up and running quickly:
+
+```bash
+# Clone the repository
+git clone https://github.com/maxkanevskiy/HugDimonXat.git
+cd HugDimonXat
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your OpenAI API key
+
+# Start all services with a single command
+chmod +x *.sh
+./start_all_services.sh
+
+# Access the application at http://localhost:5173
+```
+
+## 📖 Overview
+
+HugDimonXat is an advanced chat application that integrates voice transcription, natural language processing, and AI-powered conversational capabilities. The project features a microservice architecture that separates frontend, backend, and voice processing services for scalability and maintainability.
 
 ## 🏗️ Architecture
 
@@ -42,85 +99,12 @@ HugDimonXat/
 │   └── src/               # React components and logic
 ├── speech_service/        # Voice transcription service
 │   └── transcribe_api.py  # Whisper-based transcription API
-├── audio/                 # Storage for audio recordings from voice messages
-├── Dialogs/               # Dialog templates and scripts for conversation flows
-├── Prompts/               # AI prompt templates for different scenarios
-└── scripts/               # Deployment and utility scripts
-```
-
-## 📦 Media Storage
-
-### Current Implementation
-
-HugDimonXat currently implements a simple but functional approach to media storage:
-
-1. **Audio Files**: Voice message recordings are stored in the filesystem:
-   - Location: `/audio` directory at the project root
-   - Implementation: The transcription service in `speech_service/transcribe_api.py` saves audio files with unique filenames based on timestamps and UUIDs
-   - Format: Supports various audio formats (WEBM, MP4, OGG, WAV)
-
-2. **Dialog Data**: Conversation data is stored in-memory:
-   - Implementation: Python dictionary called `SESSION_STATE` in `Dialogs/restaurant_script_engine.py`
-   - Persistence: In-memory only, not persisted between application restarts
-
-### Best Practices for Production
-
-For a production environment handling thousands of messages daily, the following best practices are recommended:
-
-#### 1. Separate Storage from Application
-
-**Recommendation**: Move media storage to a dedicated storage service.
-
-- **Object Storage**: Use a service like AWS S3, Google Cloud Storage, or Azure Blob Storage
-- **Benefits**: Scalability, durability, and separation of concerns
-- **Implementation**: Replace direct filesystem writes with API calls to cloud storage
-
-#### 2. Database Integration
-
-**Recommendation**: Store metadata in a database, but not the actual media files.
-
-- **Metadata in Database**: Store file paths, timestamps, user IDs, and transcription results
-- **Media in Object Storage**: Store the actual audio files in object storage
-- **Hybrid Approach**: For very small audio clips, consider storing them directly in a database that supports binary data efficiently (like PostgreSQL with BYTEA type)
-
-#### 3. Retention Policy
-
-**Recommendation**: Establish a clear retention policy for media files.
-
-- **Time-Based Deletion**: Automatically delete files older than X days
-- **Usage-Based Retention**: Keep files that are frequently accessed
-- **Legal Compliance**: Ensure retention policies comply with relevant regulations
-
-#### 4. Performance Optimization
-
-**Recommendation**: Implement strategies to reduce storage needs and improve retrieval speed.
-
-- **Compression**: Use audio compression appropriate for voice (e.g., Opus codec)
-- **Caching**: Implement a caching layer for frequently accessed files
-- **CDN Integration**: For public media, use a Content Delivery Network
-
-#### 5. Backup Strategy
-
-**Recommendation**: Ensure media files are properly backed up.
-
-- **Regular Backups**: Schedule regular backups of media files
-- **Cross-Region Replication**: For cloud storage, enable cross-region replication
-- **Backup Verification**: Regularly test restoration from backups
-
-### Implementation Roadmap
-
-1. **Short-term**: Add a cleanup script to remove old audio files from the filesystem
-2. **Medium-term**: Migrate to a proper database for metadata and object storage for media files
-3. **Long-term**: Implement a complete media management system with retention policies, compression, and analytics
-
-=======
 ├── audio/                 # Storage for audio recordings
 ├── Dialogs/               # Dialog templates and scripts
 ├── Prompts/               # AI prompt templates
 └── scripts/               # Deployment and utility scripts
 ```
 
->>>>>>> d84c8fda29947329edcc6de2a1dfa4436aa50e2f
 ## 🧠 Tech Stack
 
 ### Backend Technologies
@@ -164,7 +148,7 @@ HugDimonXat leverages several AI technologies:
 5. **Language Detection**: Identifies the language of user input
 6. **Hugging Face Models**: Various NLP tasks including classification and embedding
 
-## 🚀 Deployment
+## 🛠️ Installation
 
 ### Prerequisites
 - Python 3.8+
@@ -173,11 +157,11 @@ HugDimonXat leverages several AI technologies:
 - Git
 - OpenAI API key
 
-### Local Development Setup
+### Setup Steps
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/user/HugDimonXat.git
+git clone https://github.com/maxkanevskiy/HugDimonXat.git
 cd HugDimonXat
 ```
 
@@ -198,9 +182,6 @@ pip install -r requirements.txt
 
 # For development, also install development dependencies
 pip install -r requirements-dev.txt
-
-# The consolidated requirements include all dependencies needed for both
-# backend and speech service, so no need to install them separately
 ```
 
 4. **Frontend setup**
@@ -209,7 +190,30 @@ cd frontend
 npm install
 ```
 
-### Running the Application
+### Configuration
+
+The project uses environment variables for configuration. Key variables include:
+
+```ini
+# OpenAI API Key (required)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Backend settings
+BACKEND_PORT=5001
+FLASK_DEBUG=False
+
+# Speech service settings
+SPEECH_PORT=5050
+AUDIO_DIR=./audio
+WHISPER_MODEL_SIZE=small  # Options: tiny, base, small, medium, large
+MAX_FILE_SIZE=10485760    # 10MB in bytes
+DEFAULT_LANGUAGE=ru       # Default language for transcription
+
+# Frontend settings
+VITE_API_URL=http://localhost:5001
+```
+
+## ▶️ Running the Application
 
 You can start all services with a single command:
 
@@ -242,69 +246,6 @@ Alternatively, you can start each service individually:
 To stop all services:
 ```bash
 ./stop_all_services.sh
-```
-
-### Production Deployment
-
-For production deployment, consider the following options:
-
-1. **Cloud Deployment**
-   - Deploy backend and speech services as separate instances
-   - Use a static hosting service for the frontend
-   - Set up environment variables in your cloud provider
-   - Configure CORS settings for cross-service communication
-
-2. **Serverless Deployment**
-   - Deploy backend functions to AWS Lambda or similar
-   - Host frontend on S3 or similar static hosting
-   - Use API Gateway for routing
-
-Note: Docker configuration files have been removed from the project. If you wish to use Docker for deployment, you will need to create your own Dockerfile and docker-compose.yml files.
-
-### GitHub Synchronization
-
-The project includes scripts to automatically synchronize changes with a GitHub repository:
-
-1. **Set up GitHub synchronization**
-   ```bash
-   # Make scripts executable
-   chmod +x scripts/*.sh
-
-   # Set up GitHub remote and automatic sync
-   ./scripts/setup_github_sync.sh <github_repo_url>
-
-   # Push all existing branches to GitHub
-   ./scripts/push_all_to_github.sh
-   ```
-
-2. **How it works**
-   - Adds GitHub as a remote repository
-   - Creates a post-commit hook that automatically pushes all commits to both GitLab and GitHub
-   - Ensures all changes are always available on both platforms
-
-For detailed instructions and troubleshooting, see the [GitHub Synchronization Scripts README](scripts/README.md).
-
-## ⚙️ Configuration
-
-The project uses environment variables for configuration. Key variables include:
-
-```ini
-# OpenAI API Key (required)
-OPENAI_API_KEY=your_openai_api_key_here
-
-# Backend settings
-BACKEND_PORT=5001
-FLASK_DEBUG=False
-
-# Speech service settings
-SPEECH_PORT=5050
-AUDIO_DIR=./audio
-WHISPER_MODEL_SIZE=small  # Options: tiny, base, small, medium, large
-MAX_FILE_SIZE=10485760    # 10MB in bytes
-DEFAULT_LANGUAGE=ru       # Default language for transcription
-
-# Frontend settings
-VITE_API_URL=http://localhost:5001
 ```
 
 ## 📘 API Documentation
@@ -511,7 +452,107 @@ The application includes monitoring capabilities:
 - **Log Files**: Generated in the project root directory
 - **Error Tracking**: Comprehensive error logging
 
-## 📝 Contributing
+## 📦 Media Storage
+
+### Current Implementation
+
+HugDimonXat currently implements a simple but functional approach to media storage:
+
+1. **Audio Files**: Voice message recordings are stored in the filesystem:
+   - Location: `/audio` directory at the project root
+   - Implementation: The transcription service in `speech_service/transcribe_api.py` saves audio files with unique filenames based on timestamps and UUIDs
+   - Format: Supports various audio formats (WEBM, MP4, OGG, WAV)
+
+2. **Dialog Data**: Conversation data is stored in-memory:
+   - Implementation: Python dictionary called `SESSION_STATE` in `Dialogs/restaurant_script_engine.py`
+   - Persistence: In-memory only, not persisted between application restarts
+
+### Best Practices for Production
+
+For a production environment handling thousands of messages daily, the following best practices are recommended:
+
+#### 1. Separate Storage from Application
+
+**Recommendation**: Move media storage to a dedicated storage service.
+
+- **Object Storage**: Use a service like AWS S3, Google Cloud Storage, or Azure Blob Storage
+- **Benefits**: Scalability, durability, and separation of concerns
+- **Implementation**: Replace direct filesystem writes with API calls to cloud storage
+
+#### 2. Database Integration
+
+**Recommendation**: Store metadata in a database, but not the actual media files.
+
+- **Metadata in Database**: Store file paths, timestamps, user IDs, and transcription results
+- **Media in Object Storage**: Store the actual audio files in object storage
+- **Hybrid Approach**: For very small audio clips, consider storing them directly in a database that supports binary data efficiently (like PostgreSQL with BYTEA type)
+
+#### 3. Retention Policy
+
+**Recommendation**: Establish a clear retention policy for media files.
+
+- **Time-Based Deletion**: Automatically delete files older than X days
+- **Usage-Based Retention**: Keep files that are frequently accessed
+- **Legal Compliance**: Ensure retention policies comply with relevant regulations
+
+## 🚀 Deployment
+
+### Production Deployment Options
+
+1. **Cloud Deployment**
+   - Deploy backend and speech services as separate instances
+   - Use a static hosting service for the frontend
+   - Set up environment variables in your cloud provider
+   - Configure CORS settings for cross-service communication
+
+2. **Serverless Deployment**
+   - Deploy backend functions to AWS Lambda or similar
+   - Host frontend on S3 or similar static hosting
+   - Use API Gateway for routing
+
+Note: Docker configuration files have been removed from the project. If you wish to use Docker for deployment, you will need to create your own Dockerfile and docker-compose.yml files.
+
+### GitHub Synchronization
+
+The project includes scripts to automatically synchronize changes with a GitHub repository:
+
+```bash
+# Set up GitHub synchronization
+chmod +x scripts/*.sh
+./scripts/setup_github_sync.sh <github_repo_url>
+./scripts/push_all_to_github.sh
+```
+
+For detailed instructions and troubleshooting, see the [GitHub Synchronization Scripts README](scripts/README.md).
+
+## ❓ Troubleshooting
+
+### Common Issues and Solutions
+
+1. **API Key Issues**
+   - **Problem**: "Invalid API key" or "Authentication error" when using OpenAI services
+   - **Solution**: Verify your OpenAI API key in the `.env` file and ensure it has sufficient credits
+
+2. **Audio Transcription Problems**
+   - **Problem**: Transcription service fails to process audio
+   - **Solution**: Check that the audio file format is supported (WAV, MP3, WEBM, OGG) and file size is under the limit (10MB by default)
+
+3. **Frontend Connection Issues**
+   - **Problem**: Frontend cannot connect to backend services
+   - **Solution**: Verify that all services are running and check CORS settings in the backend
+
+4. **Memory Issues**
+   - **Problem**: Application crashes with out-of-memory errors
+   - **Solution**: Reduce the Whisper model size in the configuration (try "small" or "base" instead of "medium" or "large")
+
+### Getting Help
+
+If you encounter issues not covered here, please:
+1. Check the logs in the terminal where services are running
+2. Search for similar issues in the [GitHub Issues](https://github.com/maxkanevskiy/HugDimonXat/issues)
+3. Create a new issue with detailed information about your problem
+
+## 🤝 Contributing
 
 We welcome contributions to HugDimonXat! Please follow these steps:
 
@@ -521,23 +562,29 @@ We welcome contributions to HugDimonXat! Please follow these steps:
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-For more details, contact the project maintainers.
+Please make sure your code follows our style guidelines and passes all tests.
 
 ## 📚 Additional Documentation
 
 - [Voice Recording Guide](VOICE_RECORDING_README.md) - Setup, usage, troubleshooting, and technical details for the voice recording feature
 - [Testing Documentation](TESTS.md) - Comprehensive overview of all tests in the project, including backend and frontend tests
 
-## 👥 Authors and Acknowledgment
+## 👥 Authors
 
 - **Max Kanevskiy** - *Initial work and maintenance*
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⭐ Project Status
+## 📊 Project Status
 
-![GitHub Stars](https://img.shields.io/github/stars/user/HugDimonXat)
-![GitHub Issues](https://img.shields.io/github/issues/user/HugDimonXat)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/user/HugDimonXat)
+[![GitHub Stars](https://img.shields.io/github/stars/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/maxkanevskiy/HugDimonXat)](https://github.com/maxkanevskiy/HugDimonXat/pulls)
+
+## 📞 Contact
+
+Max Kanevskiy - [GitHub Profile](https://github.com/maxkanevskiy)
+
+Project Link: [https://github.com/maxkanevskiy/HugDimonXat](https://github.com/maxkanevskiy/HugDimonXat)
